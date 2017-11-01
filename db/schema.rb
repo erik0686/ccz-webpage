@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20171101020209) do
+ActiveRecord::Schema.define(version: 20171101031817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +19,18 @@ ActiveRecord::Schema.define(version: 20171101020209) do
     t.text "info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "beneficiaries", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "age"
+    t.float "height"
+    t.float "weight"
+    t.float "body_mass_index"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "community_id"
   end
 
   create_table "communities", force: :cascade do |t|
@@ -31,6 +42,15 @@ ActiveRecord::Schema.define(version: 20171101020209) do
 
   create_table "logs", force: :cascade do |t|
     t.text "info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "status"
+    t.string "creator_email"
+    t.string "creator_firstname"
+    t.string "creator_lastname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
