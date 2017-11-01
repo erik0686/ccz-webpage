@@ -44,4 +44,10 @@ class AnnouncementsController < ApplicationController
     redirect_to announcements_path
   end
 
+  private
+
+  def announcement_params
+    params.require(:announcement).permit(:info)
+  end
+
 end
