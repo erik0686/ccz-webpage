@@ -40,4 +40,10 @@ class LogsController < ApplicationController
 		redirect_to logs_path
 	end
 
+	private
+
+  def log_params
+    params.require(:log).permit(:info)
+  end
+
 end
