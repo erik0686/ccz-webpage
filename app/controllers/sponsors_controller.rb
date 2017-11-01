@@ -36,7 +36,7 @@ class SponsorsController < ApplicationController
 	def destroy
 		@sponsor = Sponsor.find(params[:id])
 		@sponsor.destroy
-		redirect_to logs_path
+		redirect_to sponsor_path
 	end
 
 	private
