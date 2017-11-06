@@ -51,7 +51,7 @@ services:
     volumes:
       - .:/code
       - gems:/usr/local/bundle
-    tty: true
+    tty: false
     stdin_open: true
     environment:
       DATABASE_URL: "postgres://postgres:P4Ssw0rD!@db:5432/ccz_webpage"
