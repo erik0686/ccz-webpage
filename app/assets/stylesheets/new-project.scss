@@ -1,5 +1,121 @@
 .new-project{
-	width:70%;
-	background-color: red;
-	padding-top: px-to-rems(64);
+	width: 38%;
+  background-color: lightblue;
+  margin: auto;
+  margin-top: px-to-rems(64);
+  border-radius: 10px;
+}
+
+.titulo-nuevo-proyecto{
+	position: relative;
+	left: 3%;
+	font-size: 40px;
+}
+
+.form-title{
+	text-align: center;
+}
+
+.main-text {
+	background-color: lightblue;
+	margin-top: px-to-rems(64);
+	position: relative;
+	width: 50%;
+	left: 25%;
+	padding: px-to-rems(16);
+  border-radius: 10px;
+}
+
+.form {
+	position: relative;
+	margin-top: px-to-rems(64);
+	left: 7%;
+}
+
+.form3 {
+	position: relative;
+  margin-top: 4rem;
+  left: 11%;
+}
+
+.line-form{
+	margin-left: px-to-rems(40);
+}
+
+.text-form{
+	border:none;
+	box-shadow: inset 1px 1px 1px 1px #7B7977;
+	position: relative;
+	left: 31%;
+	margin-top: px-to-rems(32);
+}
+
+.project-description{
+	position: relative;
+	left: 14%;
+	font-size: 25px;
+}
+
+.input-form{
+	background-color: lightgreen;
+  margin-bottom: 10rem;
+  width: 60%;
+  position: relative;
+  left: 20%;
+  margin-top: 5rem;
+  padding-top: 1rem;
+  border-radius: 10px;
+  padding: 3rem 0px;
+}
+
+.label-text{
+	margin-right: 1rem;
+	margin-left: 10rem;
+}
+
+.label-text2{
+	margin-right: 2.3rem;	
+}
+
+.button {
+  align-items: center;
+  border: 0;
+}
+
+input.primary-button {
+  background: #e6405e;
+  border: none;
+  border-radius: px-to-rems(50);
+  box-shadow: 0 px-to-rems(5) px-to-rems(10) rgba(0, 0, 0, .15);
+  color: #fff;
+  font-size: px-to-ems(12);
+  margin-top: px-to-rems(48);
+  padding: px-to-rems(12);
+  width: px-to-rems(160);
+}
+
+.center{
+	position: relative;
+	margin:auto;
+}
+
+.input-field-style{
+	border-radius: 5px;
+}
+
+.container-principal{
+	margin: 2rem 4rem;
+	padding: 5rem 0rem;
+	background-color: #e2e0bd;
+	border-radius: 5px;
+}
+
+.email {
+	position: relative;
+	left: 3%;
+}
+
+.lastname {
+	position:relative;
+	right: 1.5%;
 }

@@ -1,4 +1,34 @@
-<div class="new-project">
-	<h1> NEW PROJECT</h1>
-	<% form_for @project do |f| %>
+<div class="container-principal">
+	<div class="new-project">
+		<h1 class="titulo-nuevo-proyecto"> Iniciativa de Proyecto</h1>
+	</div>
+
+	<p class="main-text"> Para nosotros es de suma importancia tu participación! Si deseas proponer algun proyecto, por favor deja tu informacion y la descripcion básica del proyecto
+	</p>
+	<%= form_for @project do |f| %>
+		<div class="input-form">
+			<h1 class="form-title">DATOS DEL SOLICITANTE</h1>
+			<div class="form">
+				<%= f.label :Email, { class: "main-label label-text" } %>
+			  <%= f.text_field :creator_email, { class: "line-input input-field-style email" }%>
+			</div>
+			<div class="form">
+			  <%= f.label :Nombre, { class: "main-label label-text line-form" } %>
+			  <%= f.text_field :creator_firstname, { class: "line-input input-field-style" }%>
+			</div>
+			<div class="form">
+				<%= f.label :Apellido, { class: "main-label label-text line-form" } %>
+			  <%= f.text_field :creator_lastname, { class: "line-input input-field-style lastname" }%>
+			</div>
+			<div class="form3">
+				<%= f.label :Descripcion_del_proyecto, { class: "main-label project-description" } %>
+			</div>
+			<div>
+			  <%= f.text_area :description, class: "text-form input-field-style", cols: 31, rows: 10 %>
+			</div>
+			<div>
+				<%= f.submit "CREATE", { class: "button primary-button align-flex center" } %>
+			</div>
+		</div>
+	<% end %>
 </div>
