@@ -1,0 +1,27 @@
+.home_H1{
+	background-color: #7ecb00;
+	margin: 0;
+	padding: 20px;
+	color: white;
+}
+.nav_bar{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.nav_button{
+float: left;
+padding: 20px;
+background-color: #0000e9;
+color :white;
+}
+
+.nav_button:hover, .nav_button.selected{
+	background-color: #999;
+    color: white;
+    cursor: pointer
+}
+
+
+
