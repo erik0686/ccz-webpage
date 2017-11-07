@@ -20,6 +20,12 @@
 				<%= f.label :Apellido, { class: "main-label label-text line-form" } %>
 			  <%= f.text_field :creator_lastname, { class: "line-input input-field-style lastname" }%>
 			</div>
+			<div class="imagen-proyecto">
+				<span>Ingresa una imagen para tu proyecto!</span>
+			</div>
+			<div>
+				<%= f.file_field :avatar, { class: "image-space" } %>
+			</div>
 			<div class="form3">
 				<%= f.label :Descripcion_del_proyecto, { class: "main-label project-description" } %>
 			</div>
