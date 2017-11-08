@@ -1,16 +1,59 @@
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="w3-card-4 ccz_card" >
+
+<header class="w3-container w3-blue">
+  <h1 class="card_header" id="home_Header1">Header1</h1>
+  <h1 class="card_header" id="home_Header2">Header2</h1>
+  <h1 class="card_header" id="home_Header3">Header3</h1>
+</header>
+
+<div class="w3-container">
+  <p class="home_paragraph">Lorem ipsum 1 1 1</p>
+  <p class="home_paragraph">Lorem ipsum 2 2 2</p>
+  <p class="home_paragraph">Lorem ipsum 3 3 3</p>
+</div>
+
+<footer class="w3-container w3-blue">
+  <h5>Footer1</h5>
+  <h5>Footer1</h5>
+  <h5>Footer1</h5>
+</footer>
+</div>
+
 <div>
-	<div class="ccz_content" style="max-width:120px">
-		<%= image_tag("ccz-1.JPG", class: "ccz_img")%>
-		<%= image_tag("ccz-2.png", class: "ccz_img")%>
-		<%= image_tag("ccz-3.jpeg", class: "ccz_img")%>
- 		<div class="ccz_row_padding ccz-section">
- 			<div class="ccz_col s4">
- 				<%= image_tag( "ccz-1.JPG", class: "demo ccz_opacity") %>
+	<div class="w3-content ccz_content">
+		<%= image_tag("ccz-1.JPG", class: "mySlides")%>
+		<%= image_tag("ccz-2.png", class: "mySlides")%>
+		<%= image_tag("ccz-3.jpeg", class: "mySlides")%>
+
+ 		<div class="w3-row-padding w3-section">
+ 			<div class="w3-col s4">
+ 				<%= image_tag( "ccz-1.JPG", class: "demo w3-opacity w3-hover-opacity-off", id:"cc1_image") %>
  			</div>
- 			<div class="ccz_col s4">
- 				<%= image_tag( "ccz-2.png", class: "demo ccz_opacity") %>
+ 			<div class="w3-col s4">
+ 				<%= image_tag( "ccz-2.png", class: "demo w3-opacity w3-hover-opacity-off", id:"cc2_image") %>
+ 			</div>
+ 			<div class="w3-col s4">
+ 				<%= image_tag( "ccz-3.jpeg", class: "demo w3-opacity w3-hover-opacity-off",id:"cc3_image") %>
  			</div>
  		</div>
 	</div>
 </div>
+<!--
+<div class="w3-content" style="max-width:1200px">
+  <img class="mySlides" src="ccz-1.png" style="width:100%">
+  <img class="mySlides" src="ccz-.png" style="width:100%">
+  <img class="mySlides" src="ccz-3.png" style="width:100%">
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="img_nature_wide.jpg" style="width:100%" onclick="currentDiv(1)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="img_fjords_wide.jpg" style="width:100%" onclick="currentDiv(2)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="img_mountains_wide.jpg" style="width:100%" onclick="currentDiv(3)">
+    </div>
+  </div>
+</div>
+-->
