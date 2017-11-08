@@ -42,6 +42,6 @@ class ProjectsController < ApplicationController
 	private
 
 	def project_params
-		params.require(:project).permit(:creator_email, :creator_firstname, :creator_lastname, :description, :avatar)
+		params.require(:project).permit(:creator_email, :creator_firstname, :creator_lastname, :description, :avatar, :name)
 	end
 end

@@ -27,9 +27,16 @@
 				<%= f.file_field :avatar, { class: "image-space" } %>
 			</div>
 			<div class="form3">
-				<%= f.label :Descripcion_del_proyecto, { class: "main-label project-description" } %>
+				<h1 class="project-info">DATOS DEL PROYECTO</h1>
+				<div class="form2">
+					<%= f.label :Nombre_del_proyecto, { class: "main-label name-label" } %>
+				</div>
+				<div class=form4>
+				  <%= f.text_field :name, { class: "line-input input-field-style name" }%>
+				</div>
 			</div>
-			<div>
+			<%= f.label :Descripcion_del_proyecto, { class: "main-label project-description" } %>
+			<div class=description-field>
 			  <%= f.text_area :description, class: "text-form input-field-style", cols: 31, rows: 10 %>
 			</div>
 			<div>

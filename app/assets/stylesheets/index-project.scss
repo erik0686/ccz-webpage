@@ -2,5 +2,34 @@
 	width:20%;
 	float:left;
 	margin: 2rem;
+	height: 27rem;
+	max-width: 27rem;
+	position: relative;
+}
 
+.button-delete {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: px-to-rems(16) 0;
+
+  a {
+    padding: px-to-rems(8) 0;
+    text-align: center;
+    width: px-to-rems(200);
+  }
+}
+
+.button-action {
+  background-color: #e6405e;
+  border-radius: px-to-rems(20);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.inner-card{
+	max-height: 9rem;
+	overflow-y: auto;
+	overflow-x: hidden;
 }

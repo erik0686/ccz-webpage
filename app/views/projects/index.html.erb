@@ -2,15 +2,16 @@
 <h3>Tu también únete! Observa los proyectos que voluntarios han propuesto. Si tienes una idea, por favor cuéntanosla!</h3>
 <% @projects.each do |project| %>
   <div class="w3-card-4 w3-dark-grey small-cards">
-
-	<div class="w3-container w3-center">
-	  <h3>Friend request</h3>
-	  <%= image_tag(project_image(project)) %>
-	  <h5>Creador: <b><%= project.creator_firstname + " " + project.creator_lastname%></b></h5>
-	  <p><%= project.description %></p>
+		<div class="w3-container w3-center ">
+		  <h3><%= project.name %></h3>
+		  <%= image_tag(project_image(project)) %>
+		  <h5>Creador: <b><%= project.creator_firstname + " " + project.creator_lastname%></b></h5>
+		  <div class="inner-card">
+		  	<p class="proj-description"><%= project.description %></p>
+		  </div>
+		</div>
+		<div class="col-12 button-delete">
+			<%= link_to "Delete", project, method: :delete, data: { confirm: 'Are you sure?' }, class: "button-action" %>
+		</div>
 	</div>
-
-</div>
 <% end %> 
-
-
