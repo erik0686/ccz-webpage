@@ -5,7 +5,7 @@ class AnnouncementsController < ApplicationController
 	end
 
 	def create
-		@announcement = Announcement.new(annoucement_params)
+		@announcement = Announcement.new(announcement_params)
 		if @announcement.save
 			redirect_to annoucements_path
 		else
@@ -27,7 +27,7 @@ class AnnouncementsController < ApplicationController
 
 	def update
 		@announcement = Announcement.find(params[:id])
-    if @announcement.update(annoucement_params)
+    if @announcement.update(announcement_params)
       redirect_to @announcement
     else
     	render 'edit'

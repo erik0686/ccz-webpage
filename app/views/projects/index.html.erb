@@ -10,8 +10,10 @@
 		  	<p class="proj-description"><%= project.description %></p>
 		  </div>
 		</div>
-		<div class="col-12 button-delete">
-			<%= link_to "Delete", project, method: :delete, data: { confirm: 'Are you sure?' }, class: "button-action" %>
-		</div>
+		<% if user_signed_in? %>
+			<div class="col-6 button-delete">
+				<%= link_to "Delete", project, method: :delete, data: { confirm: 'Are you sure?' }, class: "button-action" %>
+			</div>
+		<% end %>
 	</div>
 <% end %> 

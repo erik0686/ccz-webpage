@@ -1,0 +1,16 @@
+<h1 class="announcement-title">Anuncios</h1>
+<%= link_to "Nuevo Anuncio", new_announcement_path, class: "button-action3" %>
+<h3 class="instruccion">Estos son los anuncios actuales, por favor elimina los que ya hayan sido cumplidos o ya no apliquen</h3>
+<% @announcements.each do |announcement| %>
+  <div class="announcement-container">
+  	<% if user_signed_in? %>
+			<div class="delete-announcement">
+				<%= link_to "Delete", announcement, method: :delete, data: { confirm: 'Are you sure?' }, class: "button-action2" %>
+			</div>
+		<% end %>
+  	<h3 class="announcement-topic"><%= announcement.topic %></h5>
+		<div>
+		  <p class="announcement-info"><%= announcement.info %></p>
+		</div>
+	</div>
+<% end %> 

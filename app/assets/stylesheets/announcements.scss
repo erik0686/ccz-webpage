@@ -1,0 +1,53 @@
+.announcement-title{
+	text-align: center;
+}
+
+.announcement-container{
+	width:50%;
+	position:relative;
+	left:25%;
+	background-color: #ead9d9;
+	border-radius: 10px;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+	margin-bottom: 3rem;
+}
+
+.announcement-topic{
+	margin: 1rem;
+	margin-left: 3rem;
+}
+
+.announcement-info{
+	width:80%;
+	position:relative;
+	left:10%;
+	background-color: lightblue;
+	padding: 2rem;
+	border-radius: 10px;
+	font-size: 16px;
+}
+
+.instruccion{
+	margin-bottom: 3rem;
+}
+
+.button-action2 {
+  background-color: #e6405e;
+  border-radius: px-to-rems(20);
+  float:right;
+  padding: 10px 20px;
+  margin-top: 1rem;	
+  margin-right: 2rem;
+  color: white;
+}
+
+.button-action3	 {
+  background-color: green;
+  border-radius: px-to-rems(20);
+  float:right;
+  padding: 10px 20px;
+  margin-top: 1rem;	
+  margin-right: 2rem;
+  color: white;
+}
