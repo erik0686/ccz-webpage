@@ -5,7 +5,7 @@ class StudentsController < ApplicationController
 	end
 
 	def create
-		@student = Student.new(sponsor_params)
+		@student = Student.new(student_params)
 		if @student.save
 			redirect_to students_path
 		else
@@ -17,10 +17,16 @@ class StudentsController < ApplicationController
 		@students = Student.all
 	end
 
+	def destroy
+		@student = Student.find(params[:id])
+		@student.destroy
+		redirect_to students_path
+	end
+
 
 	private
 
-	def sponsor_params
+	def student_params
 		params.require(:student).permit(:name, :last_name, :student_no, :degree, :hours_given, :end_of_service, :start_of_service)
 	end
 end

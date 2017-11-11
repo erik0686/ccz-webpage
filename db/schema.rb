@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20171111163450) do
 
   # These are extensions that must be enabled in order to support this database
@@ -68,12 +67,12 @@ ActiveRecord::Schema.define(version: 20171111163450) do
     t.string "creator_lastname", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name", null: false
     t.text "description", null: false
     t.string "avatar_file_name"
     t.string "avatar_content_type"
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string "name", null: false
   end
 
   create_table "sponsors", force: :cascade do |t|

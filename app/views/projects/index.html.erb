@@ -1,5 +1,8 @@
-<h1>Proyectos</h1>
-<h3>Tu también únete! Observa los proyectos que voluntarios han propuesto. Si tienes una idea, por favor cuéntanosla!</h3>
+<div> <%= link_to "+  Nuevo Projecto", new_project_path, class: "new-student" %></div>
+<div class="project-header">
+	<h1>Proyectos</h1>
+	<h3>Tu también únete! Observa los proyectos que voluntarios han propuesto. Si tienes una idea, por favor cuéntanosla!</h3>
+</div>
 <% @projects.each do |project| %>
   <div class="w3-card-4 w3-dark-grey small-cards">
 		<div class="w3-container w3-center ">
