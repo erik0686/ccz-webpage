@@ -42,7 +42,7 @@ body{
 	margin-top: 0.5rem;
 	margin-left: 1rem;
 	margin-right: 1rem;
-	padding: 20px;
+	padding: px-to-rems(20);
 	color: white;
 }
 .nav_bar{
@@ -53,7 +53,7 @@ body{
 }
 .nav_button{
 float: left;
-padding: 20px;
+padding: px-to-rems(20);
 background-color: #0000e9;
 color :white;
 }

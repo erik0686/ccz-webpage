@@ -3,7 +3,7 @@
 }
 
 .logo_login{
-  width: 200px;
+  width: px-to-rems(200);
   margin-left: 2rem;
 }
 
@@ -17,7 +17,7 @@ body {
   margin: auto;
   margin-top:1rem;
   border-radius: px-to-rems(24);
-  padding: 0 px-to-rems(80);
+  padding: px-to-rems(80);
   background-color: lightblue;
   width: 30%;
 }
