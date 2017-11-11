@@ -7,4 +7,6 @@ module ApplicationHelper
 			project.avatar
 		end
 	end
+
+	
 end

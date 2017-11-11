@@ -16,7 +16,6 @@
   a {
     padding: px-to-rems(8) 0;
     text-align: center;
-    width: px-to-rems(200);
   }
 }
 
@@ -26,6 +25,18 @@
   position: absolute;
   bottom: 0;
   margin-bottom: 1rem;
+  width: 25%;
+  right: 2rem;
+}
+
+.button-action-accept {
+  background-color: green;
+  border-radius: px-to-rems(20);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+  width: 25%;
+  left: 2rem;
 }
 
 .inner-card{

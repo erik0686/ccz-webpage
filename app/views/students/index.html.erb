@@ -1,0 +1,42 @@
+<section class="container">  
+  <div id="list_container">
+    <section class="row">
+      <table class="col-12 show-table">
+        <tr>
+          <th class="table-header">Nombre</th>
+          <th class="table-header">Apellido</th>
+          <th class="table-header">Matrícula</th>
+          <th class="table-header">Carrera</th>
+          <th class="table-header">Fecha de inicio</th>
+          <th class="table-header">Fecha de fin</th>
+          <th class="table-header">Horas de servicio</th>
+        </tr>
+        <% @students.each do |student| %>
+          <tr>
+            <td class="table_info">
+              <%= student.name %>
+            </td>
+            <td class="table_info">
+              <%= student.last_name %>
+            </td>
+            <td class="table_info">
+              <%= student.student_no %>
+            </td>
+            <td class="table_info">
+              <%= student.degree %>
+            </td>
+            <td class="table_info">
+              <%= student.start_of_service %>
+            </td>
+            <td class="table_info">
+              <%= student.end_of_service %>
+            </td>
+            <td class="table_info">
+              <%= student.hours_given %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    </section>
+  </div>
+</section>

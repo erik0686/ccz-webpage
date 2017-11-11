@@ -64,6 +64,7 @@ GEM
       climate_control (>= 0.0.3, < 1.0)
     codeclimate-engine-rb (0.4.0)
       virtus (~> 1.0)
+    coderay (1.1.2)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     coffee-rails (4.2.2)
@@ -133,6 +134,9 @@ GEM
       ast (~> 2.2)
     pg (0.21.0)
     powerpack (0.1.1)
+    pry (0.11.2)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     puma (3.10.0)
     rack (2.0.3)
     rack-test (0.7.0)
@@ -272,6 +276,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   paperclip!
   pg (~> 0.18)
+  pry
   puma (~> 3.7)
   rails (~> 5.1.4)
   rails-controller-testing

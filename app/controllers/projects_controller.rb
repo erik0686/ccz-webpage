@@ -39,6 +39,11 @@ class ProjectsController < ApplicationController
 		redirect_to projects_path
 	end
 
+	def change_status2
+		@project = Project.find(params[:project_id])
+		@project.change_status 
+	end
+
 	private
 
 	def project_params
