@@ -1,3 +1,4 @@
+<div> <%= link_to "+  Nuevo Estudiante", new_student_path, class: "new-student" %></div>
 <section class="container">  
   <div id="list_container">
     <section class="row">
@@ -10,6 +11,7 @@
           <th class="table-header">Fecha de inicio</th>
           <th class="table-header">Fecha de fin</th>
           <th class="table-header">Horas de servicio</th>
+          <th class="table-header"></th>
         </tr>
         <% @students.each do |student| %>
           <tr>
@@ -33,6 +35,9 @@
             </td>
             <td class="table_info">
               <%= student.hours_given %>
+            </td>
+            <td class="table_info">
+              <%= link_to "Delete", student, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-student" %>
             </td>
           </tr>
         <% end %>
