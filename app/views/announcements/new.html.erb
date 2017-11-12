@@ -1,0 +1,26 @@
+<div class="container-principal">
+	<div class="new-project">
+		<h1 class="titulo-nuevo-anuncio"> Publica un nuevo Anuncio</h1>
+	</div>
+
+	<%= form_for @announcement do |f| %>
+		<div class="input-form">
+			<div class="form3">
+				<h1 class="form-title">Informacion de Anuncio</h1>
+				<div class="form2">
+					<%= f.label :Anuncio, { class: "main-label name-label"}%>
+				</div>
+				<div class=form4>
+					<%= f.text_field :topic, { class: "line-	input input-field-style name"}%>
+				</div>
+			</div>
+			<%= f.label :Mensaje, {class: "main-label project-description"}%>
+			<div class=description-field>
+				<%= f.text_area :info, class: "text-form input-field-style", cols:31, rows: 10 %>	
+			</div>
+			<div>
+				<%= f.submit "CREATE", {class: "button primary-button align-flex center"} %>
+			</div>
+		</div>
+		<% end %>
+	</div>

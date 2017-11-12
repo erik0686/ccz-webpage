@@ -1,0 +1,4 @@
+.announcement-description{
+	  position: relative;
+    left: 32%;
+}
