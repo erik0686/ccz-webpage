@@ -9,7 +9,12 @@
   </head>
 
   <body>
-  	<%= render "layouts/navbar" %>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <% if user_signed_in? %>
+      <%= render "layouts/navbar" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,27 @@
+<%= link_to "+ Nuevo Producto", new_product_path, class: "new-student" %>
+<div class="project-header">
+	<h1 class="announcement-title">Producto</h1>
+	<h3>Estos son todos los productos que existen en la actualidad. </h3>
+</div>
+<% @products.each do |product| %>
+  <div class="announcement-container">
+  	<% if user_signed_in? %>
+			<div class="delete-announcement">
+				<%= link_to "Delete", product, method: :delete, data: { confirm: 'Are you sure?' }, class: "button-action2" %>
+			</div>
+		<% end %>
+  	<h3 class="announcement-topic"><%= product.name %></h5>
+		<table class="material">
+			<tr>
+				<th>Nombre del material</th>
+				<th>Cantidad del material</th>
+			</tr>
+			<% product.materials.each do |material| %>
+				<tr>
+					<td><%= material.name %></td>
+					<td><%= product.product_materials.find(material.id).amount.to_s + " " + "kg" %></td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+<% end %> 

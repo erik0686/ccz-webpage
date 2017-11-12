@@ -1,4 +1,7 @@
-<h1 class="home_H1">CCZ</h1>
+<div class="home_H1">
+	<h1 class="page-title">CCZ</h1>
+	<h5 class="username"><%= current_user.first_name + " " + current_user.last_name %></h5>
+</div>
 <div class="w3-bar w3-black nav-corners">
   <%= link_to "HOME", home_path, class: "w3-bar-item w3-button" %>
   <a href="#" class="w3-bar-item w3-button">Sobre Nosotros</a>
