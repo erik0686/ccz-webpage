@@ -1,11 +1,13 @@
-<div class="home_H1">
-	<h1 class="page-title">CCZ</h1>
+<div class="home_H2">
+	<h1 class="home_H1">
+	<%= image_tag("Logo CCZ.png", class: "LogoNav")%>
+	CCZ</h1>
 	<h5 class="username"><%= current_user.first_name + " " + current_user.last_name %></h5>
 </div>
 <div class="w3-bar w3-black nav-corners">
-  <%= link_to "HOME", home_path, class: "w3-bar-item w3-button" %>
+  <%= link_to "Home", home_path, class: "w3-bar-item w3-button" %>
   <a href="#" class="w3-bar-item w3-button">Sobre Nosotros</a>
-  <%= link_to "ANUNCIOS", announcements_path, class: "w3-bar-item w3-button" %>
-  <%= link_to "PROYECTOS", projects_path, class: "w3-bar-item w3-button" %>
-  <%= link_to "LOG OUT", destroy_user_session_path, method: 'delete', class: "w3-bar-item w3-button"  %>
+  <%= link_to "Anuncios", announcements_path, class: "w3-bar-item w3-button" %>
+  <%= link_to "Proyectos", projects_path, class: "w3-bar-item w3-button" %>
+  <%= link_to "Log Out", destroy_user_session_path, method: 'delete', class: "w3-bar-item w3-button"  %>
 </div>

@@ -1,0 +1,46 @@
+<section class="container">
+	<div id="list_container">
+		<section class="row">
+			<table class="col-12 show-table">
+				<tr>
+					<th class="table-header">Name</th>
+					<th class="table-header">Career</th>
+					<th class="table-header">Semester</th>
+					<th class="table-header">Email</th>
+					<th class="table-header">Start Date</th>
+					<th class="table-header">End Date</th>
+					<th class="table-header">Status</th>
+					<th class="table-header"></th>
+				</tr>
+				<% @directors.each do |director| %>
+					<tr>
+						<td class="table_info">
+							<%=director.name%>
+						</td>
+						<td class="table_info" >
+							<%=director.career%>
+						</td>
+						<td class="table_info" >
+							<%=director.semester%>
+						</td>
+						<td class="table_info">
+							<%=director.mail%>
+						</td>
+						<td class="table_info">
+							<%=director.startdate%>
+						</td>
+						<td class="table_info">
+							<%=director.enddate%>
+						</td>
+						<td class="table_info">
+							<%=director.status%>
+						</td>
+						<td class="table_info">
+							<%= link_to "Delete", director, method: :delete, data: { confirm: 'Are you sure?'}, class: "delete-director" %>
+						</td>
+					</tr>
+					<% end %>
+			</table>
+		</section>
+	</div>
+</section>

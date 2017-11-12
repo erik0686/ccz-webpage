@@ -16,11 +16,17 @@ class DirectorsController < ApplicationController
 		@directors = Director.all
 	end
 
-	def show
+	def destroy
 		@director = Director.find(params[:id])
+		@director.destroy
+		redirect_to director_path
 	end
 
-	def edit
+	private 
+
+	def director_params
+		params.require(:sponsor).permit(:name, :career, :semester, :status, :mail, :startdate, :enddate)
+	end
 		
 end
 

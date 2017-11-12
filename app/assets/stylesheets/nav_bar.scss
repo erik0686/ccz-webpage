@@ -36,13 +36,25 @@
 	from {background-position:0 0;}
 	to {background-position: 500px 0;}
 }*/
+.LogoNav{
+	height: 7%;
+	width: 5%;
+}
 .home_H1{
 	border-radius: 25px;
 	background-color: #7ecb00;
 	margin-top: 0.5rem;
 	margin-left: 1rem;
 	margin-right: 1rem;
-	padding: px-to-rems(20);
+	color: white;
+	display:inline-block;
+}
+.home_H2{
+	border-radius: 25px;
+	background-color: #7ecb00;
+	margin-top: 0.5rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
 	color: white;
 }
 .nav_bar{
