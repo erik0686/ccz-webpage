@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :projects
   resources :announcements
   resources :students
+  resources :directors
 
   resources :projects do
     patch :change_status2, on: :collection
