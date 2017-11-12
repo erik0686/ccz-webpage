@@ -1,0 +1,9 @@
+<tr data-product-material-id=<%= product_material.id %> data-product-id=<%= @product.id %>>
+  <td>
+      <%= f.input_field :_destroy, as: :hidden %>
+      <%= link_to image_tag("user-minus__pink.svg"), "#", method: :delete, remote: true, class: 'remove_record delete-button delete-image' %>
+  </td>
+  <td><%= product_material.material.name %></td>
+  <td><%= f.number_field :amount, { class: "workload-input project_employee_input" }%></td>
+
+</tr>

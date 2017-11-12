@@ -8,6 +8,7 @@
   	<% if user_signed_in? %>
 			<div class="delete-announcement">
 				<%= link_to "Delete", product, method: :delete, data: { confirm: 'Are you sure?' }, class: "button-action2" %>
+				<div><%= link_to "Editar Producto", edit_product_path(product), class: "edit-product" %> </div>
 			</div>
 		<% end %>
   	<h3 class="announcement-topic"><%= product.name %></h5>
@@ -19,7 +20,7 @@
 			<% product.materials.each do |material| %>
 				<tr>
 					<td><%= material.name %></td>
-					<td><%= product.product_materials.find(material.id).amount.to_s + " " + "kg" %></td>
+					<td><%= material.product_materials.find_by(product_id: product.id).amount.to_s + " " + "kg" %></td>
 				</tr>
 			<% end %>
 		</table>

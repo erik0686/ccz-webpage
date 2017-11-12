@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   resources :projects do
     patch :change_status2, on: :collection
   end
+
+  resources :products do 
+    resources :product_materials
+  end
   
   devise_scope :user do
     authenticated :user do

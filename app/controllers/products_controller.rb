@@ -17,17 +17,18 @@ class ProductsController < ApplicationController
 	end
 
 	def show
-		@products = Product.find(params[:id])
+		@product = Product.find(params[:id])
 	end
 
 	def edit
-		@products = Product.find(params[:id]) 
+		@product = Product.find(params[:id])
+		@materials = Material.all 
 	end
 
 	def update
 		@product = Product.find(params[:id])
 		if @product.update(product_params)
-			redirect_to @product
+			redirect_to products_path
 		else
 			render 'edit'
 		end
@@ -47,6 +48,6 @@ class ProductsController < ApplicationController
 	private
 
 	def product_params
-		params.require(:product).permit(:name)
+		params.require(:product).permit(:name, product_materials_attributes: [:id, :_destroy, :product_id, :amount])
 	end
 end

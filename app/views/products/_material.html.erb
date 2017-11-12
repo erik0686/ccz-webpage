@@ -1,0 +1,7 @@
+<tr>
+  <td class="link-table"><%= form.text_field :name, label: false, class: "small-line-input" %></td>
+  <td>
+    <%= form.input_field :_destroy, as: :hidden %>
+    <%= link_to "Remove", "#", method: :delete, remote: true, class: 'remove_record button-delete' %>
+  </td>
+</tr>

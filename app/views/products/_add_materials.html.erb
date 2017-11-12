@@ -1,0 +1,31 @@
+<div style="display:none;" class="materials-table" >
+  <div class="materials-modal">
+    <div class="content-table">
+      <section class="staff-list materials-list">
+        <div>
+          <%= image_tag "x_pink.svg", class: "close-material-modal" %>
+        <div>
+        <table class="scrollbox">
+          <thead>
+            <tr>
+              <th> </th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% materials.each do |material| %>
+              <tr>
+                <td id= "add-icon-<%= material.id %>">
+                  <%= link_to product_product_materials_path(product_id: @product.id, material_id: material.id), remote: true, method: :post do %>
+                    <%= image_tag "user-minus__pink.svg" %>
+                  <% end %>
+                </td>
+                <td><%= material.name %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>
