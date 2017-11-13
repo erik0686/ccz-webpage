@@ -2,7 +2,7 @@
   background-color: green;
   border-radius: px-to-rems(20);
   float:right;
-  padding: 10px 20px;
+  padding: px-to-rems(10) px-to-rems(20);
   margin-top: 2rem;	
   margin-right: 3rem;
   color: white;
