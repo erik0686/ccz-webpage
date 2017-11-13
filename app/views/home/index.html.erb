@@ -1,19 +1,19 @@
 <div class="javascript">  
   <div class="w3-card-4 ccz_card">
     <header class="w3-container w3-blue ccz-home-header-card">
-      <h1 class="card_header" id="home_Header1">Header1</h1>
-      <h1 class="card_header" id="home_Header2">Header2</h1>
-      <h1 class="card_header" id="home_Header3">Header3</h1>
+      <h1 class="card_header" id="home_Header1">Servicio</h1>
+      <h1 class="card_header" id="home_Header2">Personalización</h1>
+      <h1 class="card_header" id="home_Header3">Desarrollo Íntegro</h1>
     </header>
 
-    <div class="w3-container">
-      <p class="home_paragraph">Lorem ipsum 1 1 1</p>
-      <p class="home_paragraph">Lorem ipsum 2 2 2</p>
-      <p class="home_paragraph">Lorem ipsum 3 3 3</p>
+    <div class="w3-container paragraph-container">
+      <p class="home_paragraph">Cientos de voluntarios visitan cada semestre las comunidades cercanas al municipio de General Zaragoza para entregar NutreTec, donaciones, medicinas y ropa. También se verifica semestralmente el avance de la salud de cada beneficiario asi como su avance en el ámbito académico.</p>
+      <p class="home_paragraph">Para Creciendo Con Zaragoza, cada niño, cada comunidad y cada familia son únicas. Nostros decidimos visitar individualmente a cada una de ellas para registrar y apoyar en las cosas que mas hacen falta. </p>
+      <p class="home_paragraph">Nosotros evitamos el asisentialismo, es decir, no solo regalamos cosas y ya, sino que cooperamos con todas las personas para elevar su calidad de vida JUNTOS, a traves de nuevas iniciativas y ayuda mutua.</p>
     </div>
 
     <footer class="w3-container w3-blue">
-      <h5> a</h5>
+      <h5> </h5>
     </footer>
   </div>
 
@@ -21,7 +21,7 @@
   	<div class="w3-content ccz_content">
   		<%= image_tag("ccz-1.JPG", class: "mySlides")%>
   		<%= image_tag("ccz-2.png", class: "mySlides")%>
-  		<%= image_tag("ccz-3.jpeg", class: "mySlides")%>
+  		<%= image_tag("ccz-3.jpeg", class: "mySlides", id: "foto3")%>
 
    		<div class="w3-row-padding w3-section">
    			<div class="w3-col s4">
@@ -35,5 +35,29 @@
    			</div>
    		</div>
   	</div>
+  </div>
+</div>
+<div class="slideshow">
+  <%= image_tag("elsalto.jpg", class: "mySlides2 image-slideshow") %>
+  <%= image_tag("elsalto2.jpg", class: "mySlides2 image-slideshow") %>
+  <%= image_tag("tepozanes.jpg", class: "mySlides2 image-slideshow") %>
+  <button class="w3-button w3-display-left" id="button-1">&#10094;</button>
+  <button class="w3-button w3-display-right" id="button1">&#10095;</button>
+  <div class="w3-card-4 ccz_card2">
+    <header class="w3-container w3-blue ccz-home-header-card">
+      <h1 class="card_header2" id="home_Header1">Areas Sociales</h1>
+      <h1 class="card_header2" id="home_Header2">El Salto</h1>
+      <h1 class="card_header2" id="home_Header3">Paisajes</h1>
+    </header>
+
+    <div class="w3-container paragraph-container">
+      <p class="home_paragraph2">No solo ha sido categorizado como patrimonio cultural, sino que cada año el Parque Recreativo "el Salto" crece  y atrea a miles de turistas, activando la economía del municipio</p>
+      <p class="home_paragraph2">El Parque Recreativo "el Salto" tiene muchas cascadas, areas de pesca, asadores y cabañas para pasar excelentes fines de semana </p>
+      <p class="home_paragraph2"> Si bien General Zaragoza es un pueblo con poca actividad económica, tiene bellos paisajes y amplios campos de sembradíos, lo que lo convierte en una potencial area de cosechas</p>
+    </div>
+
+    <footer class="w3-container w3-blue">
+      <h5> </h5>
+    </footer>
   </div>
 </div>

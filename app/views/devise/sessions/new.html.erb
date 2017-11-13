@@ -1,32 +1,25 @@
-<div class="main-container">
-  <header class="login-header align-flex">
-    <h1 class="project-title"><%= image_tag("logoccz_burned.png", class: "logo_login")%></h1>
-  </header>
-  <div class="signin-container align-flex">
-    <p class="subtitle">Bienvenido!</p>
-    <div class="text-left">
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="align-flex signin-container">
-          <div class="field">
-            <%= f.label :email, class: "main-label" %><br />
-            <%= f.email_field :email, autofocus: true, class: "input-field" %>
-          </div>
-          <div class="field">
-            <%= f.label :password, class: "main-label" %><br />
-            <%= f.password_field :password, autocomplete: "off", class: "input-field" %>
-          </div>
-          <% if devise_mapping.rememberable? -%>
-            <div class="field check">
-              <%= f.check_box :remember_me, class: "check" %>
-              <%= f.label :remember_me, class: "main-label" %>
-            </div>
-          <% end -%>
-          <div class="actions">
-            <%= f.submit "Log in", class: "button main-button" %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</div>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="login-container">
+  <%= video_tag("walking.mp4", class: "video-background", loop:"loop", autoplay: true, autobuffer: true) %>
+  <h1 class="project-title"><%= image_tag("logoccz_burned.png", class: "logo_login")%></h1>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :email, "person_outline", class: "input-icon material-icons" %><br />
+        <%= f.email_field :email, autofocus: true, class: "input-field custom-input", placeholder:"EMAIL"%>
+      </div>
 
+      <div class="field">
+        <%= f.label :password, "lock_outline", class: "input-icon material-icons" %><br />
+        <%= f.password_field :password, autocomplete: "off", class: "input-field custom-input", placeholder:"PASSWORD" %>
+      </div>
+      <% if devise_mapping.rememberable? -%>
+        <div class="field check">
+          <%= f.check_box :remember_me, class: "checkbox" %>
+          <%= f.label :remember_me, class: "main-label" %>
+        </div>
+      <% end -%>
+      <div class="actions">
+        <%= f.submit "Log in", class: "button main-button" %>
+      </div>
+    <% end %>
+</div>

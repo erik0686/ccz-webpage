@@ -23,6 +23,7 @@ gem 'devise'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'simple_form'
 gem "jquery-rails"
+gem 'ransack'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

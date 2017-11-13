@@ -1,4 +1,5 @@
 class DirectorsController < ApplicationController
+  before_action :authenticate_user!
 	def new
 		@director = Director.new
 	end

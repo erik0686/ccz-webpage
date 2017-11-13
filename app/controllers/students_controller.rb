@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-
+  before_action :authenticate_user!
 	def new
 		@student = Student.new
 	end
