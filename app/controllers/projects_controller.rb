@@ -13,21 +13,22 @@ class ProjectsController < ApplicationController
 	end
 
 	def index
-		@projects = Project.all
+		@q = Project.ransack(params[:q])
+  	@projects = @q.result(distinct: true)
 	end
 
 	def show
-		@projects = Project.find(params[:id])
+		@project = Project.find(params[:id])
 	end
 
 	def edit
-		@projects = Project.find(params[:id]) 
+		@project = Project.find(params[:id]) 
 	end
 
 	def update
 		@project = Project.find(params[:id])
 		if @project.update(project_params)
-			redirect_to @project
+			redirect_to projects_path
 		else
 			render 'edit'
 		end
@@ -47,6 +48,6 @@ class ProjectsController < ApplicationController
 	private
 
 	def project_params
-		params.require(:project).permit(:creator_email, :creator_firstname, :creator_lastname, :description, :avatar, :name)
+		params.require(:project).permit(:creator_email, :creator_firstname, :creator_lastname, :description, :avatar, :name, :status)
 	end
 end

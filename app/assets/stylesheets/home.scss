@@ -1,7 +1,8 @@
 .ccz_content{ 
 	max-width: 30rem;
 	margin-top: 3rem;
-	margin-left: 60rem;
+	margin-left: 50rem;
+	margin-right: 3rem;
 }
 .ccz_img{
 	width: 100%;
@@ -9,13 +10,43 @@
 
 .ccz_card{
 	margin-top: 3rem;
-	margin-left: 1rem;
+	margin-left: 10rem;
 	width: 25rem;
 	border-radius: 25px;
 	float: left;
+}
+
+.slideshow{
+	margin-top: 10rem;
+}
+
+.ccz_card2{
+	display: inline;
+	margin-right: 10rem;
+	width: 25rem;
+	border-radius: 25px;
+	float: right;
 }
 
 .w3-card-4{
 	border-radius: 25px;
 }
 
+.paragraph-container{
+	background-color: grey;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px; 
+}
+
+.image-slideshow{
+	margin-left: 7rem;
+	max-width: 40%;
+}
+
+.w3-display-left{
+	top: 130%;
+}
+
+.w3-display-right{
+	top: 130%;
+}

@@ -50,4 +50,37 @@ $(document).on('turbolinks:load', function() {
     	dots[slide_Index-1].className += " w3-opacity-off";
   	}
   }
+  if($(".slideshow").length > 0){
+
+    var slideIndex2 = 1;
+    showDivs2(slideIndex2);
+
+    function plusDivs2(n) {
+        showDivs2(slideIndex2 += n);
+    }
+
+    $( "#button1" ).click(function() {
+        plusDivs2(0+1);
+    });
+    $( "#button-1" ).click(function() {
+        plusDivs2(-1);
+    });
+
+    function showDivs2(n) {
+        var x = document.getElementsByClassName("mySlides2");
+        var y = $(".card_header2")
+        var z = $(".home_paragraph2")
+        if (n > x.length) {slideIndex2 = 1} 
+        if (n < 1) {slideIndex2 = x.length} ;
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            y[i].style.display = "none"; 
+            z[i].style.display = "none"; 
+
+        }
+        x[slideIndex2-1].style.display = "inline"; 
+        y[slideIndex2-1].style.display = "inline"; 
+        z[slideIndex2-1].style.display = "inline"; 
+    }
+  }
 });
