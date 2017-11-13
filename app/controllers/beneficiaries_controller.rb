@@ -1,43 +1,43 @@
 class BeneficiariesController < ApplicationController
-	def new
-		@beneficiary = Beneficiary.new
-	end
+  def new
+    @beneficiary = Beneficiary.new
+  end
 
-	def create
-		@beneficiary = Beneficiary.new(beneficiary_params)
-		if @beneficiary.save
-			redirect_to beneficiaries_path
-		else
-			render 'new'
-		end
-	end
+  def create
+    @beneficiary = Beneficiary.new(beneficiary_params)
+    if @beneficiary.save
+      redirect_to beneficiaries_path
+    else
+      render 'new'
+    end
+  end
 
-	def index
-		@beneficiaries = Beneficiary.all
-	end
+  def index
+    @beneficiaries = Beneficiary.all
+  end
 
-	def show
-		@beneficiary = Beneficiary.find(params[:id])
-	end
+  def show
+    @beneficiary = Beneficiary.find(params[:id])
+  end
 
-	def edit
-		@beneficiary = Beneficiary.find(params[:id])
-	end
+  def edit
+    @beneficiary = Beneficiary.find(params[:id])
+  end
 
-	def update
-		@beneficiary = Beneficiary.find(params[:id])
+  def update
+    @beneficiary = Beneficiary.find(params[:id])
     if @beneficiary.update(beneficiary_params)
       redirect_to @beneficiary
     else
-    	render 'edit'
+      render 'edit'
     end
     respond_to do |format|
       format.js
       format.html
     end
-	end
+  end
 
-	def destroy
+  def destroy
     @beneficiary = Beneficiary.find(params[:id])
     @beneficiary.destroy
     redirect_to beneficiaries_path

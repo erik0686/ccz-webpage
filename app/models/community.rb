@@ -1,3 +1,3 @@
 class Community < ApplicationRecord
-	has_many :beneficiaries
+  has_many :beneficiaries
 end
