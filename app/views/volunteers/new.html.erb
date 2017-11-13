@@ -1,0 +1,26 @@
+<div class="container-principal">
+	<%= form_for @volunteer do |f| %>
+	<div class="input-for">
+			<h1 class="form-title">DATOS DEL VOLUNTARIO</h1>
+			<div class="form">
+				<%= f.label :Nombre, {class: "main-label label-text label-vol-name"} %>
+				<%= f.text_field :name, {class: "line-input input-field-style email"}%>
+				<%= f.label :Matricula, {class: "main-label label-text label-vol-matricula"} %>
+				<%= f.text_field :id_number, {class: "line-input input-field-style"}%>
+			</div>
+			<div class="form">
+				<%= f.label :Edad, {class: "main-label label-text label-vol-age"}%>
+				<%= f.text_field :age, {class: "line-input input-field-style input-vol-age"}%>
+				<%= f.label :Semestre, {class: "main-label label-text"}%>
+				<%= f.text_field :semester, {class: "line-input input-field-style inpute-vol-semester"}%>
+			</div>
+			<div class="form">
+				<%=f.label :Correo, {class: "main-label label-text"}%>
+				<%=f.text_field :mail, {class: "line-input input-field-style input-vol-mail"}%>
+			</div>
+		<div>
+			<%= f.submit "CREATE", { class: "button primary-button align-flex center" } %>
+		</div>
+	</div>
+	<%end%>
+</div>
