@@ -1,0 +1,32 @@
+<div class="container-principal">
+	<%= form_for @student do |f| %>
+	<div class="input-for">
+		<h1 class="form-title">Datos del Estudiante</h1>
+			<div class="form">
+			<%= f.label :Nombre, {class: "main-label label-text label-text-stu-name"} %>
+			<%= f.text_field :name, {class: "line-input input-field-style input-field-stu-name"} %>
+			<%= f.label :Apellido, {class: "main-label label-text label-apellido-stu"} %>
+			<%= f.text_field :last_name, {class: "line-input input-field-style input-field-stu-apellido"} %>
+		</div>
+		<div class="form">
+			<%= f.label :Matricula, {class: "main-label label-text"} %>
+			<%= f.text_field :student_no, {class: "line-input input-field-style input-field-stu-no"} %>
+			<%= f.label :Carrera, {class: "main-label label-text label-carrera-stu"} %>
+			<%= f.text_field :degree, {class: "line-input input-field-style input-field-carrera-stu"} %>
+		</div>
+		<div class="form">
+			<%= f.label :Horas, {class: "main-label label-text"} %>
+			<%= f.text_field :hours_given, {class: "line-input input-field-style input-field-stu-horas"} %>
+			<%= f.label :Inicio_de_Servicio, {class: "main-label label-text"}%>
+			<%= f.text_field :start_of_service, {class: "line-input input-field-style"}%>
+		</div>
+		<div class="form">
+			<%= f.label :Fin_de_servicio, {class: "main-label label-text"} %>
+			<%= f.text_field :end_of_service, {class: "line-input input-field-style"} %>
+		</div>
+		<div>
+			<%= f.submit "CREATE", { class: "button primary-button align-flex center" } %>
+		</div>
+	</div>
+	<%end%>
+</div>

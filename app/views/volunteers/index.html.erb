@@ -1,39 +1,42 @@
 <div> <%= link_to "+ Nuevo interesado", new_volunteer_path, class: "new-volunteer" %> </div>
 <section class="container">
-	<div id="list_container">
-		<section class="row">
-			<table class="col-12 show-table">
-				<tr>
-					<th class="table-header">Nombre</th>
-					<th class="table-header">Edad</th>
-					<th class="table-header">Matricula</th>
-					<th class="table-header">Mail</th>
-					<th class="table-header">Semestre</th>
-					<th class="table-header"></th>
-				</tr>
-				<% @volunteers.each do |volunteer| %>
-					<tr>
-						<td class="table_info">
-							<%= volunteer.name %>
-						</td>
-						<td class="table_info">
-							<%= volunteer.age %>
-						</td>
-						<td class="table_info">
-							<%= volunteer.id_number %>
-						</td>
-						<td class="table_info">
-							<%= volunteer.mail %>
-						</td>
-						<td class="table_info">
-							<%= volunteer.semester %>
-						</td>
-						<td>
-							<%= link_to "Delete", volunteer, method: :delete, data: {confrim: 'Are you sure?' }, class: "delete-student" %>
-						</td>
-					</tr>
-					<% end %>
-			</table>
-		</section>
-	</div>
+  <div class="new-project">
+    <h1 class="titulo-nuevo-proyecto">Voluntarios</h1>
+  </div>
+  <div id="list_container">
+    <section class="row">
+      <table class="col-12 show-table">
+        <tr>
+          <th class="table-header">Nombre</th>
+          <th class="table-header">Edad</th>
+          <th class="table-header">Matricula</th>
+          <th class="table-header">Mail</th>
+          <th class="table-header">Semestre</th>
+          <th class="table-header"></th>
+        </tr>
+        <% @volunteers.each do |volunteer| %>
+          <tr>
+            <td class="table_info">
+              <%= volunteer.name %>
+            </td>
+            <td class="table_info">
+              <%= volunteer.age %>
+            </td>
+            <td class="table_info">
+              <%= volunteer.id_number %>
+            </td>
+            <td class="table_info">
+              <%= volunteer.mail %>
+            </td>
+            <td class="table_info">
+              <%= volunteer.semester %>
+            </td>
+            <td>
+              <%= link_to "Delete", volunteer, method: :delete, data: {confrim: 'Are you sure?' }, class: "delete-student" %>
+            </td>
+          </tr>
+          <% end %>
+      </table>
+    </section>
+  </div>
 </section>
