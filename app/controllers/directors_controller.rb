@@ -7,7 +7,7 @@ class DirectorsController < ApplicationController
   def create
     @director = Director.new(director_params)
     if @director.save
-      redirect_to director_path
+      redirect_to directors_path
     else
       render 'new'
     end
@@ -20,12 +20,12 @@ class DirectorsController < ApplicationController
   def destroy
     @director = Director.find(params[:id])
     @director.destroy
-    redirect_to director_path
+    redirect_to directors_path
   end
 
   private
 
   def director_params
-    params.require(:sponsor).permit(:name, :career, :semester, :status, :mail, :startdate, :enddate)
+    params.require(:director).permit(:name, :career, :semester, :status, :mail, :startdate, :enddate)
   end
 end

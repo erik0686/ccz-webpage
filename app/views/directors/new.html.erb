@@ -1,0 +1,32 @@
+<div class="container-principal">
+	<%= form_for @director do |f| %>
+	<div class="input-for">
+		<h1 class="form-title">Nuevo Director</h1>
+		<div class="form">
+			<%= f.label :Nombre, {class: "main-label label-text"}%>
+			<%= f.text_field :name, {class: "line-input input-field-style input-director-name"}%>
+			<%= f.label :Carrera, {class: "main-label label-text label-director-carrera"}%>
+			<%= f.text_field :career, {class: "line-input input-field-style"}%>
+		</div>
+		<div class="form">
+			<%= f.label :Status, {class: "main-label label-text"}%>
+			<%= f.text_field :status, {class: "line-input input-field-style input-director-status"}%>
+			<%= f.label :Correo, {class: "main-label label-text label-director-correo"}%>
+			<%= f.text_field :mail, {class: "line-input input-field-style input-director-correo"}%>
+		</div>
+		<div class="form">
+			<%= f.label :Inicia, {class: "main-label label-text"}%>
+			<%= f.text_field :startdate, {class: "line-input input-field-style input-director-start-date"}%>
+			<%= f.label :Fin, {class: "main-label label-text"}%>
+			<%= f.text_field :enddate, {class: "line-input input-field-style input-director-end-date"}%>
+		</div>
+		<div class="form">
+			<%= f.label :Semestre, {class: "main-label label-text"}%>
+			<%= f.text_field :semester, {class: "line-input input-field-style"}%>
+		</div>
+		<div>
+			<%= f.submit "CREATE", { class: "button primary-button align-flex center" }%>
+		</div>
+	</div>
+	<%end%>
+</div>
