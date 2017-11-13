@@ -1,0 +1,32 @@
+.new-volunteer {
+  background-color: green;
+  border-radius: px-to-rems(20);
+  float:right;
+  padding: 10px 20px;
+  margin-top: 2rem;	
+  margin-right: 3rem;
+  color: white;
+}
+.label-vol-name{
+
+}
+.label-vol-matricula{
+	position: relative;
+  left: -3%;
+}
+
+.inpute-vol-semester{
+	position: relative;
+  left: 3%;
+
+}
+
+.input-vol-age{
+	position: relative;
+  left: 5%;
+}
+
+.input-vol-mail{
+	position: relative;
+  left: 3%;
+}
