@@ -11,21 +11,19 @@ Rails.application.routes.draw do
     patch :change_status2, on: :collection
   end
 
-  resources :products do 
+  resources :products do
     resources :product_materials
   end
-  
+
   devise_scope :user do
     authenticated :user do
       root 'home#index', as: :authenticated_root
     end
     unauthenticated :user do
-      root "devise/sessions#new", as: :unauthenticated_root
+      root 'devise/sessions#new', as: :unauthenticated_root
     end
   end
 
-	get 'home', to: 'home#index'
+  get 'home', to: 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
-
-
