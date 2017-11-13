@@ -17,7 +17,7 @@
               <tr>
                 <td id= "add-icon-<%= material.id %>">
                   <%= link_to product_product_materials_path(product_id: @product.id, material_id: material.id), remote: true, method: :post do %>
-                    <%= image_tag "user-minus__pink.svg" %>
+                    <%= image_tag "user-plus-pink.svg" %>
                   <% end %>
                 </td>
                 <td><%= material.name %></td>

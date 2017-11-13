@@ -1,10 +1,13 @@
 <%= simple_form_for @product, remote: true do |f| %>
 	<div class="announcement-container">
-		<%= f.submit "Save changes", class: 'button-pill button-done action align-flex' %>
 		<div class="delete-announcement">
 			<%= link_to "Delete", @product, method: :delete, data: { confirm: 'Are you sure?' }, class: "button-action2" %>
 		</div>
-		<h3> <%=	f.text_field :name, {class: "editable-field"} %> </h3>
+
+		<h6>  
+			<%= f.label :name, {class: "name-label2"}%> 
+			<%=	f.text_field :name, {class: "editable-field"} %> 
+		</h6>
 		<div>
 		  <section class="staff-table staff-list align-flex is-column center">
 		    <table>
@@ -24,6 +27,7 @@
         <%= render "add_materials", materials: @materials %>
 		  </section>
 		</div>
+		<%= f.submit "Save changes", class: 'button-pill button-done action align-flex' %>
 	</div>
 <% end %>
 	

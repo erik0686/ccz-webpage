@@ -1,0 +1,19 @@
+<div class="container-principal">
+	<div class="new-project">
+		<h1 class="titulo-nuevo-proyecto"> Nuevo Producto</h1>
+	</div>
+
+	<h3 class="main-text"> Crea nuevos productos con sus respectivos ingredientes" </h3>
+	<%= form_for @product do |f| %>
+		<div class="input-form">
+			<h1 class="form-title">DATOS DEL PRODUCTO</h1>
+			<div class="form">
+				<%= f.label :Nombre, { class: "main-label label-text" } %>
+			  <%= f.text_field :name, { class: "line-input input-field-style email" }%>
+			</div>
+			<div>
+				<%= f.submit "CREATE", { class: "button primary-button align-flex center" } %>
+			</div>
+		</div>
+	<% end %>
+</div>

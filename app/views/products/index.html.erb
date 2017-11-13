@@ -7,7 +7,7 @@
   <div class="announcement-container">
   	<% if user_signed_in? %>
 			<div class="delete-announcement">
-				<%= link_to "Delete", product, method: :delete, data: { confirm: 'Are you sure?' }, class: "button-action2" %>
+				<%= link_to "Delete", product, method: :delete, data: { confirm: 'Are you sure?' }, class: "button-action4" %>
 				<div><%= link_to "Editar Producto", edit_product_path(product), class: "edit-product" %> </div>
 			</div>
 		<% end %>

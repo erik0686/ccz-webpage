@@ -37,8 +37,8 @@
   border-radius: px-to-rems(20);
   float:right;
   padding: 10px 20px;
-  margin-top: 1rem;	
   margin-right: 2rem;
+  margin-bottom: 2rem;
   color: white;
 }
 
@@ -50,4 +50,19 @@
   margin-top: 1rem;	
   margin-right: 2rem;
   color: white;
+}
+
+.button-action4 {
+  background-color: #e6405e;
+  border-radius: px-to-rems(20);
+  float:right;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.name-label2{
+	margin-left: 2rem;
 }
